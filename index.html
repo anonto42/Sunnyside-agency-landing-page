@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <style>
+    :root{
+      --SoftRed: hsl(7, 99%, 70%);
+      --Yellow: hsl(51, 100%, 49%);
+      --DarkDesaturatedCyan: hsl(167, 40%, 24%);/*(graphic design text)*/
+      --DarkBlue: hsl(198, 62%, 26%); /*(photography text)*/
+      --DarkModerateCyan: hsl(168, 34%, 41%); /* (footer)*/
+      --Cym: hsl(168, 43%, 64%);
+      --VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+      --VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+      --DarkGrayishBlue: hsl(232, 10%, 55%);
+      --GrayishBlue: hsl(210, 4%, 67%);
+      --White: hsl(0, 0%, 100%)
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      max-width: 1440px;
+      margin: auto;
+      background: var(--GrayishBlue);
+    }
+    header{
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      position: relative;
+    }
+    header img{
+      width: 1440;
+      height: 100vh;
+    }
+    header .navigation{
+      margin: 10px 20px;
+      height: 50px;
+      width: 100%;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .navigation .logo{
+      padding: 20px;
+      font-size: 25px;
+      color: var(--White);
+    }
+    header .navigation .infos button{
+      padding: 10px 15px;
+      border: none;
+      border-radius: 40px;
+      margin: 0 5px;
+      background-color: var(--White);
+      color: var(--White);
+      background: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    header .navigation .infos button:nth-child(4){
+      background-color: var(--White);
+      color: var(--VeryDarkDesaturatedBlue);
+      border: 2px solid var(--White)
+    }
+    header .navigation .infos button:nth-child(4):hover{
+      border: 2px solid var(--White);
+      background-color: transparent;
+      color: var(--White);
+    }
+    header .over{
+      margin-top: -650px;
+      margin-left: 500px;
+    }
+    header .over h1{
+      font-size: 50px;
+      color: var(--White);
+      text-transform: uppercase;
+    }
+    header .over img{
+      height: 150px;
+      margin-left: 210px;
+      margin-top: 100px;
+    }
+    .section1{
+      position: relative;
+      height: 100vh;
+      margin-top: 40vh;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Barlow', sans-serif;
+    }
+    .section1 .cont{
+      display: flex;
+    }
+    .section1 .cont .text{
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      width: 741px;
+      background: var(--White);
+      padding: 150px 150px;
+    }
+    .section1 .cont .text h1{
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: var(--VeryDarkDesaturatedBlue)
+    }
+    .section1 .cont .text p{
+      margin-bottom: 20px;
+      color: var(--GrayishBlue);
+    }
+    .section1 .cont img{
+      width: 741px;
+    }
+    .section1 .cont a{
+      text-transform: uppercase;
+      font-size: 20px;
+      text-decoration: none;
+      border-bottom: 5px solid var(--Yellow);
+      border-radius: 5px;
+      color: var(--VeryDarkDesaturatedBlue);
+    }
+    .section1 .cont .img .textS{
+      margin-top:-200px;
+      width: 741px;
+      color: var(--DarkModerateCyan);
+      text-align: center;
+    }
+    .section1 .cont .img .textS h1{
+      margin-bottom: 10px;
+    }
+    .section3{
+      display: flex;
+      background: var(--White);
+      margin-top: -206px;
+      width: 1482px;
+      height: 100vh;
+    }
+    .section3 h2{
+      text-transform: uppercase;
+      margin: 90px 450px;
+      font-size: 50px;
+      color: var(--GrayishBlue);
+    }
+    .section3 .men{
+      margin: 250px auto;
+      text-align: center;
+    }
+    .section3 .men img{
+      border-radius: 50%;
+      width: 120px;
+    }
+    .section3 .men p{
+      margin: 40px 0;
+      font-size: 20px;
+      color: var(--VeryDarkGrayishBlue);
+    }
+    .section3 .men h3{
+      color: var(--VeryDarkDesaturatedBlue);
+      font-weight: 700;
+      font-size: 35px;
+    }
+    .section4{
+      display: flex;
+    }
+    .section4 .imgBox img{
+      width: 371px;
+    }
+    .section4 .imgBox .img1{
+      width: 369px;
+      height: 460px;
+    }
+    .section5{
+      z-index:10000;
+      text-align: center;
+      width: 1482px;
+      height: 30vh;
+      margin-top: -25px;
+      background-color: var(--Cym);
+    }
+    .section5 h2{
+      margin: 20px 0;
+      padding: 25px;
+      font-size: 35px;
+      text-transform: uppercase;
+      color: var(--DarkDesaturatedCyan);
+    }
+    .section5 .it{
+      display: flex;
+      justify-content: space-around;
+      color: var(--DarkDesaturatedCyan);
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .section5 .it h3:hover{
+      color: var(--White);
+    }
+    .section5 .links{
+      margin-top: 37px;
+    }
+    .section5 .links img{
+      margin: 0 20px;
+      width: 30px;
+      cursor: pointer;
+    }
+    @media(max-width: 375px){
+
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/desktop/image-header.jpg" alt="">
+    <div class="navigation">
+      <div class="logo">
+        <h2>Sunnyside</h2>
+      </div>
+      <div class="infos">
+        <button>About</button>
+        <button>Services</button>
+        <button>Projects</button>
+        <button>Contact</button>
+      </div>
+    </div>
+    <div class="over">
+      <h1>We are creatives</h1>
+      <img src="images/icon-arrow-down.svg">
+    </div>
+  </header>
+
+  <section class="section1">
+    <div class="cont">
+      <div class="text">
+      <h1>Transform your brand</h1>
+      <p>We are a full-service creative agency specializing in <br> helping brands grow fast. 
+        Engage your clients through <br> compelling visuals that do most of the marketing for you.</p>
+        <a href="">Learn more</a>
+      </div>
+      <img src="images/desktop/image-transform.jpg">
+    </div>
+    <div class="cont">
+      <img src="images/desktop/image-stand-out.jpg">
+      <div class="text">
+        <h1>Stand out to the right audience</h1>
+        <p>Using a collaborative formula of designers, researchers, <br> photographers, videographers, and copywriters, we’ll <br> build and extend your brand in digital places.</p>
+        <a href="Learn more" style="border-bottom: 5px solid var(--SoftRed);">Learn more</a>
+      </div>
+    </div>
+  </section>
+  <div class="section1">
+    <div class="cont">
+      <div class="img">
+        <img src="images/desktop/image-graphic-design.jpg" style="position: relative;">
+        <div class="textS" style="position: absolute;">
+        <h1>Graphic design</h1>
+        <p>Great design makes you memorable. We deliver <br> artwork that underscores your brand message <br> and captures potential clients’ attention.</p>
+        </div>
+      </div>
+      <div class="img">
+        <img src="images/desktop/image-photography.jpg">
+        <div class="textS" style="position: absolute; color: var(--DarkGrayishBlue);">
+        <h1>Photography</h1>
+        <p>Increase your credibility by getting the most <br> stunning, high-quality photos that improve your <br> business image.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <section class="section3">
+    <h2 style="position: absolute;" id="name">Client testimonials</h2>
+    <div class="men">
+      <img src="images/image-emily.jpg">
+      <p>We put our trust in Sunnyside and they <br> delivered, making sure our needs were met <br> and deadlines were always hit.</p>
+      <h3>Emily R.</h3>
+      <p>Marketing Director</p>
+    </div>
+    <div class="men">
+      <img src="images/image-thomas.jpg" alt="">
+      <p>Sunnyside’s enthusiasm coupled with their <br> keen interest in our brand’s success made it <br> a satisfying and enjoyable experience.</p>
+      <h3>Thomas S.</h3>
+      <p>Chief Operating Officer</p>
+    </div>
+    <div class="men">
+      <img src="images/image-jennie.jpg" alt="">
+      <p>Incredible end result! Our sales increased <br> over 400% when we worked with Sunnyside. <br> Highly recommended!</p>
+      <h3>Jennie F.</h3>
+      <p>Business Owner</p>
+    </div>
+  </section>
+  <section class="section4">
+    <div class="imgBox">
+      <img class="img1" src="images/desktop/image-gallery-milkbottles.jpg">
+    </div>
+    <div class="imgBox">
+      <img src="images/desktop/image-gallery-orange.jpg" alt="">
+    </div>
+    <div class="imgBox">
+      <img src="images/desktop/image-gallery-cone.jpg" alt="">
+    </div>
+    <div class="imgBox">
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+    </div>
+  </section>
+  <footer>
+    <div class="section5">
+      <h2>Sunnyside</h2>
+      <div class="it">
+        <h3>About</h3>
+        <h3>Services</h3>
+        <h3>Projects</h3>
+      </div>
+      <div class="links">
+        <img src="images/icon-facebook.svg">
+        <img src="images/icon-instagram.svg">
+        <img src="images/icon-twitter.svg">
+        <img src="images/icon-pinterest.svg">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
